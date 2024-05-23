@@ -25,10 +25,68 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
+const validateCred = ccNum => {
+
+    let revArr = [];
+        for (i = ccNum.length - 1; i >= 0; i--) {
+            revArr.push(ccNum[i]);
+        }
+
+    let newArr = revArr.map((element, index) => {
+        if (index % 2 != 0) {
+            if (element * 2 > 9) {
+                return element * 2 - 9;
+            }
+            return element * 2;
+        }
+        return element;
+    });
+
+    let sum = newArr.reduce((a, b) => a + b, 0);
+
+    if (sum % 10 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+} 
+
+const findInvalidCards = allNums => {
+    invalidArr = [];
+    allNums.forEach(cardNum => {
+        if (validateCred(cardNum) === false) {
+            invalidArr.push(cardNum);
+        };
+    });
+    return invalidArr;
+}
+
+const idInvalidCardCompanies = invalidCards => {
+    invalidCompanies = [];
+    invalidCards.forEach(cardNum => {
+        switch(cardNum[0]) {
+            case 3:
+              invalidCompanies[3] = 'Amex';
+              break;
+            case 4:
+              invalidCompanies[4] = 'Visa';
+              break;
+            case 5:
+              invalidCompanies[5] = 'MasterCard';
+              break;
+            case 6:
+              invalidCompanies[6] = 'Discover';
+              break;
+            default:
+              console.log('Company not found');
+          }
+        comp = [];
+        invalidCompanies.forEach(com => comp.push(com));
+    });
+    return comp;
+}
 
 
-
-
-
-
-
+console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
+console.log(idInvalidCardCompanies(batch)); // Find out which companies have mailed out invalid cards
