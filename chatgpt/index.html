@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arseny Dombrovsky - Bartender Mixologist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 2em 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .bio {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin: 0.5em 0 0.2em;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 0.7em;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        .buymeacoffee {
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arseny Dombrovsky</h1>
+        <p>Bartender Mixologist</p>
+    </header>
+    
+    <div class="container">
+        <section class="bio">
+            <h2>About Me</h2>
+            <p>Welcome! I'm Arseny Dombrovsky, a sophisticated mixologist with a passion for crafting unique and memorable cocktails. With years of experience behind the bar, I blend creativity, precision, and a touch of elegance in every drink I create. Join me on a journey through the art of mixology.</p>
+        </section>
+        
+        <section class="section" id="cocktail-book">
+            <h2>Cocktail Book</h2>
+            <p>Discover my collection of signature cocktails, curated to elevate your bartending repertoire. Each recipe is designed to bring out the best flavors and create unforgettable experiences.</p>
+        </section>
+        
+        <section class="section" id="photo-blog">
+            <h2>Photo Blog</h2>
+            <p>Explore my photo blog, showcasing the visual beauty of cocktail creation. From the vibrant ingredients to the final garnished glass, each photo tells a story of passion and craftsmanship.</p>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        
+        <div class="buymeacoffee">
+            <a href="https://www.buymeacoffee.com/yourusername" target="_blank">Buy me a coffee</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Arseny Dombrovsky</p>
+    </footer>
+</body>
+</html>
